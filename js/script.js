@@ -1,50 +1,41 @@
+document.addEventListener("DOMContentLoaded", function () {
 
 const text = "Hey Bestie ❤️ I Made This Website For You";
 let i = 0;
 
 function typing(){
-
 if(i < text.length){
-
 document.getElementById("typing").innerHTML += text.charAt(i);
-
 i++;
-
 setTimeout(typing,80);
-
 }
-
 }
 
 typing();
 
-
-function startJourney(){
-
+window.startJourney = function(){
 window.location="memories.html"
-
 }
 
-
-function yes(){
-
+window.yes = function(){
 alert("You made me the happiest person ❤️")
-
 }
-
 
 const noBtn = document.getElementById("noBtn")
 
 if(noBtn){
 
-noBtn.addEventListener("mouseover",function(){
+noBtn.addEventListener("mouseover", function(){
 
-this.style.position="absolute"
+const x = Math.random() * (window.innerWidth - 100)
+const y = Math.random() * (window.innerHeight - 50)
 
-this.style.top=Math.random()*500+"px"
-
-this.style.left=Math.random()*500+"px"
+noBtn.style.position = "absolute"
+noBtn.style.left = x + "px"
+noBtn.style.top = y + "px"
 
 })
 
 }
+
+})
