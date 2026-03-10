@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-const text = "Hey Bestie ❤️ I Made This Website For You";
+const text = "Hey Bestie ❤️ I Made This For You";
 let i = 0;
 
 function typing(){
